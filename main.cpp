@@ -132,6 +132,15 @@ bool dfs(int r, int c,
         return false;
     if (c < 0 || c >= M)
         return false;
+
+    //visited check
+    if (visited[r][c])
+        return false;
+
+    visited[r][c] = true;
+
+    //exploring neighbors
+    //loop...
 }
 
 
