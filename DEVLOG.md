@@ -15,10 +15,10 @@ Entry #2 04/19/26
 - Attempts made: I checked whether I had a visited condition and realized I needed to mark the current cell as visited before exploring neighbors.
 - Final resolution: I added `visited[r][c] = true;` before the neighbor loop and returned false immediately for already visited cells.
 
-Entry #3 MM/DD/YY
-- Issues/Error messages or symptoms:
-- Attempts made:
-- Final resolution:
+Entry #3 04/19/26
+- Issues/Error messages or symptoms: I didn't know how to use `dr` and `dc` to be able to move through the maze. 
+- Attempts made: I traced through one cell by hand and tested using `nr = r + dr[i]` and `nc = c +dc[i]` inside a loop with index i from 0 to 3. 
+- Final resolution: I eventually used the direction arrays in a loop to check up, right, down, and left in a smooth and consistent way.
 
 Entry #4 MM/DD/YY
 - Issues/Error messages or symptoms:

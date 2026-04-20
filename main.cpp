@@ -140,7 +140,12 @@ bool dfs(int r, int c,
     visited[r][c] = true;
 
     //exploring neighbors
-    //loop...
+    for (int i = 0; i < 4; i++) {
+        int nr = r + dr[i];
+        int nc = c + dc[i];
+
+        //only assign parent if neighbor can be visited
+    }
 }
 
 
