@@ -20,10 +20,10 @@ Entry #3 04/19/26
 - Attempts made: I traced through one cell by hand and tested using `nr = r + dr[i]` and `nc = c +dc[i]` inside a loop with index i from 0 to 3. 
 - Final resolution: I eventually used the direction arrays in a loop to check up, right, down, and left in a smooth and consistent way.
 
-Entry #4 MM/DD/YY
-- Issues/Error messages or symptoms:
-- Attempts made:
-- Final resolution:
+Entry #4 04/22/26
+- Issues/Error messages or symptoms: The path couldn't print correctly unless the parent arrays were filled in the right places.
+- Attempts made: I first thought about assigning the parent after recursion, but then realized `printPath()` needs each child cell to stor the cell it came from before continuing.
+- Final resolution: I assigned `parent_r[nr][nc] = r` and `parent_c[nr][nc] = c` right before the recursive DFS call on that neighbor.
 
 Entry #5 MM/DD/YY
 - Issues/Error messages or symptoms:
