@@ -139,6 +139,10 @@ bool dfs(int r, int c,
 
     visited[r][c] = true;
 
+    //check if cell is the exit
+    if (r == exit_r && c == exit_c)
+        return true;
+
     //exploring neighbors
     for (int i = 0; i < 4; i++) {
         int nr = r + dr[i];

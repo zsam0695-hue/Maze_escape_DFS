@@ -25,10 +25,10 @@ Entry #4 04/22/26
 - Attempts made: I first thought about assigning the parent after recursion, but then realized `printPath()` needs each child cell to stor the cell it came from before continuing.
 - Final resolution: I assigned `parent_r[nr][nc] = r` and `parent_c[nr][nc] = c` right before the recursive DFS call on that neighbor.
 
-Entry #5 MM/DD/YY
-- Issues/Error messages or symptoms:
-- Attempts made:
-- Final resolution:
+Entry #5 04/24/26
+- Issues/Error messages or symptoms: I wasn't sure how the DFS would stop once the exit was found, since it's mentioned in the assignment description. 
+- Attempts made: I checked if the current cell was the exit, and if it was, I returned true so the recursive calls would keep returning true and the DFS would stop
+- Final resolution: I added an exit check `if (r == exit_r && c == exit_c)` to return true if the exit was found, and made the recursive neighbor call return true right away if the exit was found.
 
 Entry #6 MM/DD/YY
 - Issues/Error messages or symptoms:
