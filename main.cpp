@@ -156,6 +156,7 @@ bool dfs(int r, int c,
                 return true;
         }
     }
+    return false;
 }
 
 

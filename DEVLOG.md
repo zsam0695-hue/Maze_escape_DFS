@@ -30,7 +30,12 @@ Entry #5 04/24/26
 - Attempts made: I checked if the current cell was the exit, and if it was, I returned true so the recursive calls would keep returning true and the DFS would stop
 - Final resolution: I added an exit check `if (r == exit_r && c == exit_c)` to return true if the exit was found, and made the recursive neighbor call return true right away if the exit was found.
 
-Entry #6 MM/DD/YY
+Entry #6 04/26/26
+- Issues/Error messages or symptoms: I wanted to make sure DFS wouldn't try and move outside the maze boundaries, which would be an invalid indexing. 
+- Attempts made: I added checks for row and column values before allowing DFS to continue. I also checked neighbors before assigning parents and the recursion line. 
+- Final resolution: I used bounds checks both at the top of the function and inside the neighbor loop too, to prevent access to anything out of range.
+
+  Entry #7 00/00/00
 - Issues/Error messages or symptoms:
 - Attempts made:
 - Final resolution:
