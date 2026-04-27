@@ -133,6 +133,10 @@ bool dfs(int r, int c,
     if (c < 0 || c >= M)
         return false;
 
+    //wall check
+    if (maze[r][c] == 1)
+        return false;
+
     //visited check
     if (visited[r][c])
         return false;
