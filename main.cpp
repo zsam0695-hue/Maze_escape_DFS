@@ -127,6 +127,10 @@ bool dfs(int r, int c,
     int N = maze.size();
     int M = maze[0].size();
 
+    //dimension check
+    //if (N < 2 || M < 2)
+    //    return false;
+
     //out-of-bounds check
     if (r < 0 || r >= N)
         return false;
@@ -172,6 +176,13 @@ int main() {
 
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
+
+    //to handle any dimensions < 2
+    if ( N < 2 || M < 2) {
+        cout<<"Invalid dimensions, Try again. (N > 1, M > 1)"<<endl;
+        main();
+        return 0;
+    }
 
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);

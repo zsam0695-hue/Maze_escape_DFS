@@ -1,10 +1,3 @@
-Minimum 6 entries.
-Each entry must document:
-- The issue encountered.
-- Error messages or symptoms.
-- Attempts made.
-- Final resolution.
-
 Entry #1 04/17/26 
 - Issues/Error messages or symptoms: I wasn't sure how to start the DFS function or what order the checks should go in.
 - Attempts made: I looked at the project README and looked at the function parameters to understand what variables were already given.
@@ -35,7 +28,12 @@ Entry #6 04/26/26
 - Attempts made: I added checks for row and column values before allowing DFS to continue. I also checked neighbors before assigning parents and the recursion line. 
 - Final resolution: I used bounds checks both at the top of the function and inside the neighbor loop too, to prevent access to anything out of range.
 
-  Entry #7 04/27/26
+Entry #7 04/27/26
 - Issues/Error messages or symptoms: I needed to make sure that the walls weren't treated as available path cells.
-- Attempts made: I reviewed the maze generator and checked to make sure that 0 mean open and 1 means wall.
+- Attempts made: I reviewed the maze generator and checked to make sure that 0 means open and 1 means wall.
 - Final resolution: I added a wall check with `if (maze[r][c] == 1) return false;` so DFS only explores open cells and not walls.
+
+Entry #8 04/29/26
+- Issues/Error messages or symptoms: I looked back at the `OUTPUTguide.md` and the `README.md` while testing to make sure everything was correct. I know this wasn't a requirement, but when inputting any dimension values less than 2 it would either do nothing or crash.
+- Attempts made: I tried fixing the problem with a simple if statement in `dfs(...)`, but that did nothing. I'm not allowed to touch the other functions, so I tried fixing the problem in main.
+- Final resolution: I wanted the program to allow you to try again until you input valid dimensions, so I wrote an if statement printing "Invalid dimen...." and calling `main()` again, but the code still wouldn't end properly sometimes, so I just added a `return 0;`.
